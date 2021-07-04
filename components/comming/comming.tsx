@@ -3,6 +3,7 @@ import { TIMER_ID } from "libs/const";
 import { getNumberString } from "libs/ultility";
 import React from "react";
 import styles from "./comming.module.scss";
+import { Spin } from 'antd';
 
 const Comming = () => {
     const [time, setTime] = React.useState<Time>({
@@ -76,19 +77,23 @@ const Comming = () => {
             <h1>COMMING SOON</h1>
             <div className = {styles.times}>
                 <div>
-                    <h1>{time.days}</h1>
+                    {!isLoaded && <Spin size="large" />}
+                    {isLoaded && <h1>{time.days}</h1>}
                     <p>Ngày</p>
                 </div>
                 <div>
-                    <h1>{time.hours}</h1>
+                    {!isLoaded && <Spin size="large" />}
+                    {isLoaded &&<h1>{time.hours}</h1>}
                     <p>Giờ</p>
                 </div>
                 <div>
-                    <h1>{time.minutes}</h1>
+                    {!isLoaded && <Spin size="large" />}
+                    {isLoaded && <h1>{time.minutes}</h1>}
                     <p>Phút</p>
                 </div>
                 <div>
-                    <h1>{time.seconds}</h1>
+                    {!isLoaded && <Spin size="large" />}
+                    {isLoaded && <h1>{time.seconds}</h1>}
                     <p>Giây</p>
                 </div>
             </div>
