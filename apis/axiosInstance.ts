@@ -6,7 +6,8 @@ const axiosInstance = globalAxios.create();
 axiosInstance.interceptors.request.use(
     function (request) {
         request.headers = {
-            'Content-Type': 'application/json;charset=UTF-8'
+            'Content-Type': 'application/json;charset=UTF-8',
+            'Access-Control-Allow-Origin': '*'
         }
         return request;
     }
