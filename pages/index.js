@@ -7,6 +7,7 @@ export default function Home() {
       <Head>
         <title>S Shop App</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="W8kc4WlU1OO_I76CmgndqrjA0JXtU4N3I_HrigWRaSE" />
       </Head>
       <main>
         <Comming></Comming>
