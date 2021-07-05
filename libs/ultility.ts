@@ -1,3 +1,5 @@
+import { notification } from "antd";
+
 export const getNumberString = (number: number) => {
     if (number === undefined || number === null) {
         return '';
@@ -8,3 +10,11 @@ export const getNumberString = (number: number) => {
        return number + '';
     }
 }
+
+export const openNotificationWithIcon = (type, message, description) => {
+    notification[type]({
+      message: message,
+      description:
+      description,
+    });
+  };
