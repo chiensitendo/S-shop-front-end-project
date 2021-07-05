@@ -59,7 +59,7 @@ const Comming = () => {
             setIsLoaded(true);
         });
         getVisit(ViSIT_ID).then(res => {
-            setCount(res.data.times);
+            setCount(res.data.times + 1);
         }).catch(err => console.log(err));
         openNotificationWithIcon('success', "Cảm ơn bạn đã ghé thăm S - Shop!", "");
         updateVisit(ViSIT_ID).then().catch(err => console.log(err));              
