@@ -1,4 +1,4 @@
-import { getTimer, setTimer } from "apis/master-api";
+import { getTimer } from "apis/master-api";
 import { TIMER_ID } from "libs/const";
 import { getNumberString } from "libs/ultility";
 import React from "react";
@@ -14,10 +14,6 @@ const Comming = () => {
     });
     const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
 
-    const insertTimer = async (value: string, type: string) => {
-        setTimer(TIMER_ID, value, type).then().catch(err => console.log(err));
-    }
-
     React.useEffect(() => {
         if (isLoaded){
             setInterval(() => {
@@ -32,23 +28,19 @@ const Comming = () => {
                 } else {
                     t.seconds = getNumberString(sc);
                 }
-                insertTimer(t.seconds, 'seconds');
                 if (min >= 60) {
                     h =  h + 1;
                     t.minutes = '00';
                 } else {
                     t.minutes = getNumberString(min);
                 }
-                insertTimer(t.minutes, 'minutes');
                 if (h >= 24){
                     d = d + 1;
                     t.days = d + '';
                     t.hours = '00';
-                    insertTimer(t.days, 'days');
                 } else {
                     t.hours = getNumberString(h);
                 }
-                insertTimer(t.hours, 'hours');
                 setTime(Object.assign({}, t));
                 
             }, 1000); 
