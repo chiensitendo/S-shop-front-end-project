@@ -14,8 +14,8 @@ class MyDocument extends NextDocument {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="S-Shop - Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
-          <meta name="robots" content="all" />
-          <meta name="googlebot" content="all" />
+          <meta name="robots" />
+          <meta name="googlebot" />
           <meta name="google-site-verification" content="W8kc4WlU1OO_I76CmgndqrjA0JXtU4N3I_HrigWRaSE" />
           <script dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
