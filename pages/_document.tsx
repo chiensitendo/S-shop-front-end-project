@@ -19,6 +19,15 @@ class MyDocument extends NextDocument {
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','GTM-WM899BC');`}
           </script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159445034-1">
+          </script>
+          <script>
+              {`window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-159445034-1');`}
+          </script>
         </Head>
         <body>
               <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM899BC"
