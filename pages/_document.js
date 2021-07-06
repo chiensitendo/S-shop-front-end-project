@@ -5,7 +5,7 @@ class MyDocument extends NextDocument {
     const initialProps = await NextDocument.getInitialProps(ctx)
     return { ...initialProps }
   }
-
+  
   render() {
     return (
       <Html lang="en">
@@ -14,7 +14,7 @@ class MyDocument extends NextDocument {
           <meta name="google-site-verification" content="W8kc4WlU1OO_I76CmgndqrjA0JXtU4N3I_HrigWRaSE" />
           <script src = "assets/vendors/google-verification.js" type = "text/javascript">
           </script>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159445034-1">
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1C7Y4ZLLD">
           </script>
           <script src = "assets/vendors/gtag.js" type = "text/javascript">
           </script>
