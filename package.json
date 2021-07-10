@@ -15,7 +15,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-router-dom": "^5.2.0",
-    "sass": "^1.35.1"
+    "sass": "^1.35.1",
+    "socket.io-client": "^4.1.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.11",

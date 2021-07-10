@@ -12,7 +12,8 @@ class MyDocument extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          {/* <link rel="icon" href="/favicon.ico" /> */}
+          <link rel="icon" href="/assets/images/logo.svg" /> 
           <meta name="description" content="S-Shop - Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
           <meta name="robots" />
           <meta name="googlebot" />
