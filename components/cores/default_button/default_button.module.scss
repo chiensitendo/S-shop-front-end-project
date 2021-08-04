@@ -1,0 +1,40 @@
+@import "@/styles/_variables.scss";
+
+.DefaultButton {
+    & button {
+        border-radius: 30px;
+        padding: 6.4px 50px;
+        width: 100%;
+    }
+    // & .primary {
+    //     // background-color: $primary_color;
+    //     // border-color: $primary_color;
+    //     // &:hover,&:focus{
+    //     //     background-color: $primary_color_400;
+    //     //     border-color: $primary_color_400;
+    //     // }
+    // }
+    & .primary_color_full {
+        background-color: $primary_color;
+        border-color: $primary_color;
+        &:hover,&:focus{
+            background-color: $primary_color_400;
+            border-color: $primary_color_400;
+        }
+    }
+    & .secondary_color_full {
+        background-color: $secondary_color;
+        border-color: $secondary_color;
+        &:hover,&:focus{
+            background-color: $secondary_color_400;
+            border-color: $secondary_color_400;
+        }
+    }
+    & .outlinePrimary {
+        border-color: $primary_color;
+        color: $primary_color;
+        &:hover,&:focus{
+            color: $primary_color;
+        }
+    }
+}

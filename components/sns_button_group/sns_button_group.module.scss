@@ -1,0 +1,10 @@
+.SnSButtonGroup {
+    display: grid;
+    grid-template-columns: auto;
+    & > a {
+        cursor: pointer;
+        & > img {
+            width: 42px;
+        }
+    }
+}

@@ -13,3 +13,9 @@ export const updateVisit = async (id) => {
     return axiosInstance.put(`${SERVER_API_URL}/masters/visit/${id}`);
 };
 
+export const insertSubscribe = async (email) => {
+    return axiosInstance.post(`${SERVER_API_URL}/subscribe`, {
+        email: email
+    });
+};
+
