@@ -11,6 +11,25 @@
         top: 10px;
         left: 10px;
     }
+    .Language {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        
+        :first-child {
+            margin-right: 10px;
+        }
+        img {
+            height: 36px;
+            box-sizing: border-box;
+            &.active {     
+                border: 2px solid $secondary_color;
+                border-radius: 5px;
+            }
+        }
+
+    }
     .container {
         display: flex;
         align-items: center;

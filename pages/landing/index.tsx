@@ -4,19 +4,54 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from "next-i18next";
 import SnSButtonGroup from "@/components/sns_button_group/sns-button-group";
 import SubscribeModal from "@/components/subscribe_modal/subscribe_modal";
-
+import SuccessModal from "@/components/cores/success_modal/success_modal";
 const LandingPage = (props) => {
     const [isModalVisible, setIsModalVisible] = React.useState(true);
+    const [isResultModalVisible, setIsResultModalVisible] = React.useState(false);
+    const [isErrorModalVisible, setIsErrorModalVisible] = React.useState(false);
+    const [lang, setLang] = React.useState(null);
     const {t, i18n} = useTranslation();
     const handleOk = () => {
         setIsModalVisible(false);
       };
     
-      const handleCancel = () => {
+    const handleCancel = () => {
         setIsModalVisible(false);
-      };
+    };
+    const handleResult = (isSuccess: boolean) => {
+      if (isSuccess === true){
+        setIsResultModalVisible(true);
+      } else {
+        setIsErrorModalVisible(true);
+      }
+      setTimeout(() => {
+        setIsErrorModalVisible(false);
+        setIsResultModalVisible(false);
+      },1000);
+      setIsModalVisible(false);
+    }
+    React.useEffect(() => {
+      if (i18n && i18n.language){
+        setLang(i18n.language);
+      }
+    },[]);
+    // const changeLanguage =  (lang: string) => (event) => {
+    //   if (i18n){
+    //     console.log(lang);
+    //     i18n.changeLanguage(lang);
+    //     setIsModalVisible(true);
+    //   }
+    // }
     return <div className = {styles.Landing}>
         <img src ="assets/images/long_logo.svg" alt = "SoCheap"/>
+        {/* {lang && <div className = {styles.Language}>
+          <img className = {classNames({[styles.active]: lang === LANGUAGE.VIETNAM})} 
+              onClick = {changeLanguage(LANGUAGE.VIETNAM)}
+              src = "assets/icons/vietnam.svg" alt = "VI"/>
+          <img className = {classNames({[styles.active]: lang === LANGUAGE.ENGLISH})}
+              onClick = {changeLanguage(LANGUAGE.ENGLISH)} 
+              src = "assets/icons/united-kingdom.svg" alt = "EN"/>
+        </div>} */}
         <div className = {styles.container}>
             <div className = {styles.title}>
                 <h1>{t('welcome')}</h1>
@@ -31,8 +66,20 @@ const LandingPage = (props) => {
             isModalVisible = {isModalVisible} 
             handleOk = {handleOk} 
             handleCancel = {handleCancel}
-            subscribe = {t('subscribe')}
-            subscribe_content = {t('subscribe_content')} t = {t}/>
+            onResult = {handleResult}/>
+        <SuccessModal
+              status = "success" 
+              visible = {isResultModalVisible} 
+              title = "Đăng ký thành công!" 
+              onCancel = {() => setIsResultModalVisible(false)} 
+              subTitle = {"Cảm ơn bạn đã đăng ký!"}/>
+        <SuccessModal
+              status = "error" 
+              visible = {isErrorModalVisible}
+              afterClose = {() => setIsModalVisible(true)}
+              onCancel = {() => setIsErrorModalVisible(false)} 
+              title = "Đăng ký thất bại!" 
+              subTitle = {"Đăng ký thất bại rùi vui lòng đăng ký lại nhé!"}/>
     </div>
 }
 

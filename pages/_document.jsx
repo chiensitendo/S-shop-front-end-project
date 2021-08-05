@@ -45,6 +45,9 @@ class MyDocument extends NextDocument {
         <body>
               <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM899BC"
               height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe></noscript>
+              <div id = "wrapper-so-cheap-loading">
+                  <div id = "so-cheap-loading"><div></div></div>
+              </div>
           <Main />
           <NextScript />
         </body>

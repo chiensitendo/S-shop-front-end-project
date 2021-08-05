@@ -9,15 +9,27 @@ axiosInstance.interceptors.request.use(
             'Content-Type': 'application/json;charset=UTF-8',
             'Access-Control-Allow-Origin': '*'
         }
+        let elem = document.getElementById("wrapper-so-cheap-loading");
+        if (elem){
+            elem.style.display = "flex";
+        }
         return request;
     }
 )
 
 axiosInstance.interceptors.response.use(
     function (response) {
+        let elem = document.getElementById("wrapper-so-cheap-loading");
+        if (elem){
+            elem.style.display = "none";
+        }
         return response;
     },
     function (error) {
+        let elem = document.getElementById("wrapper-so-cheap-loading");
+        if (elem){
+            elem.style.display = "none";
+        }
         if (error?.response?.status >= 500) {
             router.push('/error');
         } 

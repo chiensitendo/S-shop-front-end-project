@@ -5,7 +5,8 @@
     "email": "Email",
     "name_input_placeholder": "Enter your name",
     "email_input_placeholder": "Enter your email",
-    "welcome": "Chào mừng bạn đến với",
-    "subscribe": "ĐĂNG KÝ NGAY!",
-    "subscribe_content": "Đăng ký để nhận những thông tin mới nhất về SoCheap! Cũng như những ưu đãi khác dành cho khác hàng đầu tiên!"
+    "welcome": "Welcome to my page",
+    "subscribe": "Subscribe Now!",
+    "subscribe_content": "Subscribe for getting the newest informations of SoCheap and the attractive offers for new customers of our application.",
+    "register": "Register"
 }

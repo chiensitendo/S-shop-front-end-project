@@ -1,26 +1,36 @@
 import styles from "./subscribe_modal.module.scss";
 import classNames from "classnames";
 import Modal from "antd/lib/modal/Modal";
-import { Form, Input, Checkbox } from 'antd';
+import { Form, Input } from 'antd';
 import SInput from "../cores/s-input/s-input";
 import { createRules } from "libs/ultility";
 import { RULE_TYPE } from "libs/types";
 import DefaultButton from "../cores/default_button/default_button";
 import { insertSubscribe } from "apis/master-api";
+import { useTranslation } from "next-i18next";
+import React from "react";
 const SubscribeModal = (props: Props) => {
-    const {className, isModalVisible, handleOk, handleCancel, subscribe, subscribe_content, t} = props;
+    const {t} = useTranslation();
+    const {className, isModalVisible, handleOk, handleCancel, onResult
+        } = props;
+    const [isLoad, setIsLoad] = React.useState(true);
+
+    React.useEffect(() => {
+        setIsLoad(false);
+    },[]);
     const onFinish = (values: any) => {
-        console.log('Success:', values);
-        insertSubscribe(values.email).then(res => {
-            console.log(res);
+        insertSubscribe({
+            name: values.name,
+            email: values.email
+        }).then(res => {
+            onResult && onResult(true);
         }).catch(err => {
-            console.log(err);
+            onResult && onResult(false);
         });
     };
     const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
     };
-     return <Modal className = {classNames(className, styles.SubscribeModal)}
+     return !isLoad && <Modal className = {classNames(className, styles.SubscribeModal)}
                 title={null} visible={isModalVisible}
                 centered = {true} 
                 footer = {null}
@@ -29,8 +39,8 @@ const SubscribeModal = (props: Props) => {
                         <img src = "assets/images/paper_fly.svg"/>
                     </div>
                     <div className = {styles.Content}>
-                        <h2>{subscribe}</h2>
-                        <p>{subscribe_content}</p>
+                        <h2>{t('subscribe')}</h2>
+                        <p>{t('subscribe_content')}</p>
                         <Form 
                                 name="subscribe"
                                 layout="vertical"
@@ -48,7 +58,7 @@ const SubscribeModal = (props: Props) => {
                                     rules={createRules("email", [RULE_TYPE.REQUIRED, RULE_TYPE.EMAIL])}                                    
                                 ><Input placeholder = {t('email_input_placeholder')}/></SInput>
                                 <Form.Item>
-                                    <DefaultButton className = {styles.submitButton} htmlType = "submit">Đăng ký</DefaultButton>
+                                    <DefaultButton className = {styles.submitButton} htmlType = "submit">{t('register')}</DefaultButton>
                                 </Form.Item>
                         </Form>
                     </div>
@@ -62,7 +72,5 @@ type Props = {
     isModalVisible?: boolean;
     handleOk?: () => void;
     handleCancel?: () => void;
-    subscribe?: string;
-    subscribe_content?: string;
-    t: any;
+    onResult?: (isSuccess: boolean) => void
 }
