@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>S Shop App</title>
+        <title>So Cheap App</title>
+        <meta property="og:url" content="https://so-cheap.vercel.app/"></meta>
+        <meta property="og:site_name" content="So Cheap"></meta>
       </Head>
       <main>
         <Comming></Comming>

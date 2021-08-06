@@ -5,6 +5,8 @@ import { useTranslation } from "next-i18next";
 import SnSButtonGroup from "@/components/sns_button_group/sns-button-group";
 import SubscribeModal from "@/components/subscribe_modal/subscribe_modal";
 import SuccessModal from "@/components/cores/success_modal/success_modal";
+import Head from 'next/head';
+
 const LandingPage = (props) => {
     const [isModalVisible, setIsModalVisible] = React.useState(true);
     const [isResultModalVisible, setIsResultModalVisible] = React.useState(false);
@@ -43,6 +45,11 @@ const LandingPage = (props) => {
     //   }
     // }
     return <div className = {styles.Landing}>
+        <Head>
+            <title>So Cheap App | Trang Landing</title>
+            <meta property="og:url" content="https://so-cheap.vercel.app/landing"></meta>
+            <meta property="og:site_name" content="So Cheap | Landing"></meta>
+        </Head>
         <img src ="assets/images/long_logo.svg" alt = "SoCheap"/>
         {/* {lang && <div className = {styles.Language}>
           <img className = {classNames({[styles.active]: lang === LANGUAGE.VIETNAM})} 

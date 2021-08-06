@@ -14,15 +14,13 @@ class MyDocument extends NextDocument {
         <Head>
           {/* <link rel="icon" href="/favicon.ico" /> */}
           <link rel="icon" href="/assets/images/logo.svg" /> 
-          <meta name="description" content="S-Shop - Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
+          <meta name="description" content="So-Cheap - Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
           <meta name="robots" />
           <meta name="googlebot" />
           <meta name="google-site-verification" content="W8kc4WlU1OO_I76CmgndqrjA0JXtU4N3I_HrigWRaSE" />
-          <meta property="og:title" content="S Shop | Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
+          <meta property="og:title" content="S Cheap | Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
           <meta property="og:type" content="website"></meta>
-          <meta property="og:description" content="S Shop. Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
-          <meta property="og:url" content="https://s-shop.vercel.app/"></meta>
-          <meta property="og:site_name" content="S Shop"></meta>
+          <meta property="og:description" content="S Cheap. Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
           <script dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

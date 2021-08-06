@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://s-shop.vercel.app
+Sitemap: https://so-cheap.vercel.app
