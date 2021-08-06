@@ -23,7 +23,7 @@ class MyDocument extends NextDocument {
           <meta property="og:description" content="S Cheap. Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
           <meta property="og:image" content="https://drive.google.com/thumbnail?id=14MOdn0bAnzsa5XwEkitkkVaM8ZyfqzOP" />          
           <meta property ="og:image:width" content ="1200"/>
-          <meta property ="og:image:height" content ="420"/>
+          <meta property ="og:image:height" content ="627"/>
           <script dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
