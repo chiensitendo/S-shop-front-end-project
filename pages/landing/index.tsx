@@ -6,6 +6,8 @@ import SnSButtonGroup from "@/components/sns_button_group/sns-button-group";
 import SubscribeModal from "@/components/subscribe_modal/subscribe_modal";
 import SuccessModal from "@/components/cores/success_modal/success_modal";
 import Head from 'next/head';
+import { updateVisit } from "apis/master-api";
+import { ViSIT_ID } from "libs/const";
 
 const LandingPage = (props) => {
     const [isModalVisible, setIsModalVisible] = React.useState(true);
@@ -36,6 +38,8 @@ const LandingPage = (props) => {
       if (i18n && i18n.language){
         setLang(i18n.language);
       }
+      updateVisit(ViSIT_ID).then(res => {
+      }).catch(err => console.log(err));
     },[]);
     // const changeLanguage =  (lang: string) => (event) => {
     //   if (i18n){
