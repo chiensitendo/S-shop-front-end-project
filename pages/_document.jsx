@@ -21,6 +21,7 @@ class MyDocument extends NextDocument {
           <meta property="og:title" content="S Cheap | Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
           <meta property="og:type" content="website"></meta>
           <meta property="og:description" content="S Cheap. Mua sắm thuận tiên, đảm bảo, tương tác trực tiếp, dễ dàng"></meta>
+          <meta property="og:image"              content="https://drive.google.com/thumbnail?id=14MOdn0bAnzsa5XwEkitkkVaM8ZyfqzOP" />          
           <script dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
