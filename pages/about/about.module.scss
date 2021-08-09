@@ -1,0 +1,28 @@
+@import '../../styles/scss//variables';
+
+.AboutPage {
+    background-image: url(/assets/images/under_construction.svg);
+    height: calc(100vh - 62px);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    & > div {
+        text-align: center;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        h1 {
+            font-size: 4em;
+        }
+    }
+}
+@media screen and (max-width: $break-point-ls) {
+    .AboutPage {
+        & > div {
+            h1 {
+                font-size: 3em;
+            }
+        }
+    }
+}
