@@ -1,0 +1,133 @@
+@import '../../styles/scss/variables';
+
+.ErrorPage {
+    position: relative;
+    height: 100vh;
+    background-image: url("/assets/images/error_background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    padding: 50px;
+    overflow: auto;
+    & h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 5em;
+        margin: 0;
+    }
+    & h2 {
+        margin: 0;
+        text-align: center;
+        color: #fff;
+        font-size: 3em;
+        word-break: break-all;
+        a {
+            display: inline-flex;
+            align-items: center;
+            & > span {
+                margin: 10px 30px;
+                font-size: 0.5em;
+            }
+        }
+
+    }
+    .ButtonGroup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & button {
+            margin: 20px;
+            & svg {
+                margin-right: 0;
+            }
+        }
+    }
+    .logo {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 1;
+        ._logo{
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+    .Cat {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        max-width: 40%;
+        max-height: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .Buttons {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        justify-content: space-between;
+        max-width: $break-point-ls;
+        & p {
+            padding: 10px;
+        }
+    }
+}
+@media only screen and (max-width: $break-point-ls) {
+    .ErrorPage {
+        padding: 25% 50px 50px 50px;
+        .Cat {
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: $break-point-md) {
+    .ErrorPage {
+        padding: 15% 20px 20px 20px;
+        & h1 {
+
+            font-size: 4em;
+        }
+        & h2 {
+            font-size: 2em;
+            line-height: 1.2em;
+            a {
+                & > span {
+                    margin: 0 10px;
+                    font-size: 0.5em;
+                }
+            }
+        }
+        .Cat {
+            max-width: 100%;
+            position: unset;
+            left: 0;
+            transform: unset;
+        }
+        .ButtonGroup {
+            & button {
+                margin: 20px 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $break-point-vs) {
+    .ErrorPage {
+        & h1 {
+            font-size: 3.5em;
+        }
+        .ButtonGroup {
+            flex-wrap: wrap;
+            padding-top: 10px;
+            & button {
+                margin: 10px 5px;
+            }
+        }
+    }
+}
+

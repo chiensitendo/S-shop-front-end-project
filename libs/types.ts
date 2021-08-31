@@ -4,3 +4,9 @@ export enum RULE_TYPE {
     CHECKBOX_REQUIRED = 3,
     EMAIL = 4
 }
+
+export type Choice = {
+    id: number;
+    label: string;
+    value: any;
+}

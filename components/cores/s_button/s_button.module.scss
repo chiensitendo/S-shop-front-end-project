@@ -1,0 +1,66 @@
+@import "../../../styles/scss/variables";
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > span {
+        line-height: 0px !important;
+    }
+    & svg {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+}
+.full_primary {
+    background-color: $primary_color;
+    border-color: $primary_color;
+    &:hover,&:focus{
+        background-color: $primary_color_400;
+        border-color: $primary_color_400;
+    }
+}
+.outline_primary {
+    border-color: $primary_color;
+    color: $primary_color;
+    &:hover,&:focus{
+        color: #fff;
+        background-color: $primary_color_200;
+        border-color: $primary_color_200;
+    }
+}
+.full_secondary {
+    background-color: $secondary_color;
+    border-color: $secondary_color;
+    &:hover,&:focus{
+        background-color: $secondary_color_400;
+        border-color: $secondary_color_400;
+    }
+}
+.outline_secondary {
+    border-color: $secondary_color;
+    color: $secondary_color;
+    &:hover,&:focus{
+        color: #fff;
+        background-color: $secondary_color_200;
+        border-color: $secondary_color_200;
+    }
+}
+
+.full_green {
+    background-color: $green_color;
+    border-color: $green_color;
+    &:hover,&:focus{
+        background-color: $green_color_400;
+        border-color: $green_color_400;
+    }
+}
+.outline_green {
+    border-color: $green_color;
+    color: $green_color;
+    &:hover,&:focus{
+        color: #fff;
+        background-color: $green_color_200;
+        border-color: $green_color_200;
+    }
+}

@@ -50,9 +50,10 @@ const LandingPage = (props) => {
     // }
     return <div className = {styles.Landing}>
         <Head>
-            <title>So Cheap Online Shopping | Mua và Bán hàng hóa dễ dàng trên website và điện thoại | Trang Landing</title>
+            <title>So Cheap Online Shopping | Mua và Bán hàng hóa dễ dàng trực tuyến trên website và điện thoại | Trang Landing</title>
             <meta property="og:url" content="https://so-cheap.vercel.app/landing"></meta>
-            <meta property="og:site_name" content="So Cheap Online Shopping | Mua và Bán hàng hóa dễ dàng trên website và điện thoại | Landing"></meta>
+            <meta property="og:site_name" content="So Cheap Online Shopping | Mua và Bán hàng hóa dễ dàng trực tuyến trên website và điện thoại | Landing"></meta>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
         </Head>
         <img src ="assets/images/long_logo.svg" alt = "SoCheap"/>
         {/* {lang && <div className = {styles.Language}>

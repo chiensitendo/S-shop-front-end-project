@@ -2,10 +2,9 @@ import styles from "./success_modal.module.scss";
 import classNames from "classnames";
 import Modal from "antd/lib/modal/Modal";
 import { Result } from "antd";
-import { useTranslation } from "next-i18next";
+
 const SuccessModal = (props: Props) => {
     const {className, visible, title, subTitle, status, afterClose, onCancel} = props;
-    const {t} = useTranslation();
     return <Modal 
                 visible = {visible} 
                 className = {classNames(className, styles.SuccessModal)}
@@ -22,7 +21,7 @@ type Props = {
     className?: string;
     visible?: boolean;
     title?: string;
-    subTitle?: string;
+    subTitle?: any;
     status: "success" | "error" | "info" | "warning";
     afterClose?: () => void;
     onCancel?: () => void;

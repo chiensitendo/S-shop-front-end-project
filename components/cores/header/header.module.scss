@@ -7,6 +7,7 @@
     justify-content: space-between;
     border: 1px solid #f0f0f0;
     padding: 0 10px 0 10px;
+    z-index: 9999;
     & p {
         margin: 0;
         font-size: 14px;
@@ -58,6 +59,18 @@
         align-items: center;
         justify-content: center;
         order: 3;
+        .group {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            .icon {
+                display: none;
+                & > span {
+                    background-color: $primary_color;
+                }
+            }
+        }
         
     }
 }
@@ -102,7 +115,12 @@
         .actions {
             order: 3;
             .group {
-                display: none;
+                .button {
+                    display: none;
+                }
+                .icon {
+                    display: block;
+                }
             }
         }
     }

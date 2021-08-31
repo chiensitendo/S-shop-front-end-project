@@ -22,7 +22,7 @@ export const openNotificationWithIcon = (type, message, description) => {
   import { Rule } from "antd/lib/form";
 import { RULE_TYPE } from "./types";
 
-export const createRules = (name: string, types: number[]): Rule[] => {
+export const createRules = (name: string, types: number[], add?: any): Rule[] => {
     let rules: Rule[] = [];
     if (types.includes(RULE_TYPE.REQUIRED)){
         rules.push({ required: true, message: `Xin hãy điền ${name} của bạn!` });
@@ -37,5 +37,15 @@ export const createRules = (name: string, types: number[]): Rule[] => {
         const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         rules.push({pattern: RegExp(regex), message: "Định dạng email không đúng!"});
     }
+    if (add){
+        rules.push(add);
+    }
     return rules;
 }
+
+export function capitalizeFirstLetter(string) {
+    if (!string){
+        return "";
+    }
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }

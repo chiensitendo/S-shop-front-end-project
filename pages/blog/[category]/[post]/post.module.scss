@@ -1,0 +1,231 @@
+@import '../../../../styles/scss//variables';
+
+.BlogPage {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100%;
+    background: #CDDBE2;
+    .BlogHeader {
+        background: #fff;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: fit-content;
+        & h1 {
+            margin: 0;
+            & span {
+                margin-right: 10px;
+            }
+        }
+        .breadcrumb {
+            ol {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                color: $primary_color;
+                & > * {
+                    padding: 0 10px;
+                }
+                & li {
+                    word-break: break-word;
+                    & span {
+                        color: $primary_color;
+                    }
+                }
+            }
+        }
+    }
+    .PostContent {
+        .PostImage {
+            padding: 0 5%;
+            & img {
+                width: 100%;
+                max-width: 100%;
+                max-height: 550px;
+            }
+        }
+        .PostContainer {
+            padding: 0 10%;
+            & > div {
+                margin-top: -150px;
+                width: 100%;
+                max-width: 100%;
+            }
+            .subNote {
+                font-size: 16px;
+                font-weight: bold;
+                color: #888692;
+            }
+            .PostTitle {
+                & h1 {
+                    margin: 0;
+                }
+                padding-bottom: 20px;
+            }
+            .relatedPost {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & > div {
+                    & > p {
+                        &:first-child{
+                            color: #888692;
+                            margin: 0;
+                            font-size: 14px;
+                        }
+                        &:last-child {
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: $third_color;
+                        }   
+                    }
+                }
+                .icon {
+                    display: none;
+                    font-size: 24px;
+                    margin: 10px 0 0 0;
+                }
+                .previous {
+                    & p > span {
+                        margin-right: 10px;
+                    }
+                    .icon {
+                        text-align: left;
+                    }
+                }
+                .next {
+                    & p {
+                        text-align: right;
+                    }
+                    & p > span {
+                        margin-left: 10px;
+                    }
+                    .icon {
+                        text-align: right;
+                    }                    
+                }
+            }
+            .Tags {
+                padding: 30px 0 0 0;
+                display: flex;
+                align-items: center;
+                margin: 0 -5px;
+                & > p {
+                    margin: 5px;
+                    padding: 10px 10px;
+                    border: 1px solid rgba(0, 0, 0, 0.06);
+                    text-align: center;
+                    min-width: 80px;
+                    border-radius: 15px;
+                }
+            }
+            .CommentList {
+                padding: 20px;
+                max-height: 500px;
+                overflow: auto;
+                .description {
+                    & p {
+                        margin: 0 0 5px 0;
+                        white-space: pre-wrap;
+                    }
+                }
+            }
+            .Comment {
+                .submitButton {
+                    max-width: 200px;
+                }
+                .Info {
+                    display: flex;
+                    align-items: center;
+                    & > div {
+                        margin-right: 50px;
+                        width: 100%;
+                        max-width: 400px;
+                    }
+                }
+            }
+            .Rating {
+                & > div {
+                    display: inline-block;
+                    margin-left: 20px;
+                    & > button {
+                        padding: 6.4px 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $break-point-ls) {
+    .BlogPage {
+        .BlogHeader {
+            display: block;
+            .breadcrumb {
+                margin: 0 -10px;
+                ol {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+        .PostContent {
+            .PostImage {
+                padding: 0 0;
+            }
+        }
+        .PostContent {
+            .PostImage {
+                padding: 0 0;
+            }
+            .PostContainer {
+                padding: 0 0%;
+                & > div {
+                    margin-top: 0;
+                    width: 100%;
+                    max-width: 100%;
+                }
+                .Comment {
+                    .submitButton {
+                        max-width: unset ;
+                    }
+                    .Info {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        & > div {
+                            margin-right: 0px ;
+                            width: 100%;
+                            max-width: unset;
+                        }
+                    }
+                }
+                .relatedPost {
+                    display: flex;
+                    align-items: flex-start;
+                    & > div {
+                        & > p {
+                                & > span {
+                                    display: none;
+                                }
+                            }   
+                    }
+                    .icon {
+                        display: block;
+                    }
+                    .previous {
+                        width: 50%;
+                    }
+                    .next {
+                        width: 50%;                  
+                    }
+                }
+                
+            }
+        }
+    }
+}

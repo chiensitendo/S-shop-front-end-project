@@ -4,13 +4,15 @@ import classNames from "classnames";
 import styles from "./s-input.module.scss";
 
 const SInput = (props: Props) => {
-    const {children, className, label, name, rules} = props;
+    const {children, className, label, name, rules, dependencies, hasFeedback} = props;
 
     return <Form.Item 
                 className = {classNames(className, styles.SInput)}
                 label = {label}
                 name = {name}
+                dependencies = {dependencies}
                 rules = {rules ? rules: []}
+                hasFeedback = {hasFeedback}
                 >{children}</Form.Item>
 }
 
@@ -22,4 +24,6 @@ type Props = {
     children?: any;
     className?: string;
     rules?: Rule[];
+    dependencies?: any[];
+    hasFeedback?: boolean;
 }

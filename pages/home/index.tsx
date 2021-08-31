@@ -52,9 +52,10 @@ const HomePage = (props) => {
     return <SLayout>
               <div className = {styles.HomePage}>
             <Head>
-                <title>So Cheap Online Shopping | Mua và Bán hàng hóa dễ dàng trên website và điện thoại | Trang Chủ | Home</title>
+                <title>So Cheap Online Shopping | Mua và Bán hàng hóa dễ dàng trực tuyến trên website và điện thoại | Trang Chủ | Home</title>
                 <meta property="og:url" content="https://so-cheap.vercel.app/home"></meta>
-                <meta property="og:site_name" content="So Cheap Online Shopping | Mua và Bán hàng hóa dễ dàng trên website và điện thoại | Trang Chủ | Home"></meta>
+                <meta property="og:site_name" content="So Cheap Online Shopping | Mua và Bán hàng hóa dễ dàng trực tuyến trên website và điện thoại | Trang Chủ | Home"></meta>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
             <div className = {styles.container}>
                 <div className = {styles.title}>

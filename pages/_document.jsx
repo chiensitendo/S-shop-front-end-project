@@ -14,13 +14,13 @@ class MyDocument extends NextDocument {
         <Head>
           {/* <link rel="icon" href="/favicon.ico" /> */}
           <link rel="icon" href="/assets/images/logo.svg" /> 
-          <meta name="description" content="So Cheap Online Shopping - Mua sắm và Buôn bán hàng hóa thuận tiện, đảm bảo, tương tác trực tiếp, dễ dàng trên website và điện thoại."></meta>
+          <meta name="description" content="So Cheap Online Shopping - Mua sắm, buôn bán, hàng hóa, thuận tiện, đảm bảo, tương tác, trực tuyến, dễ dàng, trên website và điện thoại."></meta>
           <meta name="robots" />
           <meta name="googlebot" />
           <meta name="google-site-verification" content="W8kc4WlU1OO_I76CmgndqrjA0JXtU4N3I_HrigWRaSE" />
-          <meta property="og:title" content="So Cheap Online Shopping | Mua sắm và Buôn bán hàng hóa thuận tiện, đảm bảo, tương tác trực tiếp, dễ dàng trên website và điện thoại."></meta>
+          <meta property="og:title" content="So Cheap Online Shopping | Mua sắm, buôn bán, hàng hóa, thuận tiện, đảm bảo, tương tác, trực tuyến, dễ dàng, trên website và điện thoại."></meta>
           <meta property="og:type" content="website"></meta>
-          <meta property="og:description" content="So Cheap Online Shopping | Mua sắm và Buôn bán hàng hóa thuận tiện, đảm bảo, tương tác trực tiếp, dễ dàng trên website và điện thoại."></meta>
+          <meta property="og:description" content="So Cheap Online Shopping | Mua sắm, buôn bán, hàng hóa, thuận tiện, đảm bảo, tương tác, trực tuyến, dễ dàng, trên website và điện thoại."></meta>
           <meta property="og:image" content="https://drive.google.com/thumbnail?id=14MOdn0bAnzsa5XwEkitkkVaM8ZyfqzOP" />          
           <meta property ="og:image:width" content ="1200"/>
           <meta property ="og:image:height" content ="627"/>

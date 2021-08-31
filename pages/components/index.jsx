@@ -18,6 +18,7 @@ const ComponentsPage = () => {
     React.useEffect(() => {
         socket.on('connection', (message) => {
             console.log('server connected');
+            console.log(message);
             setSocketId(message.id);
           });
         socket.on('disconnect', () => {

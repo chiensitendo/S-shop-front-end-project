@@ -1,0 +1,33 @@
+@import "../../../styles/scss/variables";
+.Search {
+  width: 100%; 
+  height: 60px;
+  z-index: 90;
+}
+
+.Input {
+  input {
+    border-radius: 30px;
+    height: 60px;
+  }
+  input ~ span {
+    border-top-right-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+    height: 60px;
+    button {
+      height: 60px !important;
+      border-top-right-radius: 30px !important;
+      border-bottom-right-radius: 30px !important; 
+    }  
+  }
+}
+
+@media screen and (max-width: $break-point-ls) {
+  .SearchMobile {
+    width: 60px; 
+    height: 60px;
+    z-index: 90;
+    transition: width ease 500ms;
+
+  }
+}
