@@ -10,3 +10,23 @@ export type Choice = {
     label: string;
     value: any;
 }
+
+export type LocalStorageUserModel = {
+    id: number;
+    token: string;
+    refreshToken: string;
+    tokenType: string;
+    roles: Array<number>;
+    expiredTime: number;
+    username: string;
+    isCompleted: boolean;
+    email: string;
+    info?: LocalStorageUserInfoModel;
+}
+
+export type LocalStorageUserInfoModel = {
+    firstName?: string;
+    lastName?: string;
+    id: number;
+    avatarUrl?: string; 
+}

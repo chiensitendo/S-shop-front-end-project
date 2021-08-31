@@ -1,0 +1,80 @@
+@import "../../../styles/scss/variables";
+
+.LoginPage{
+    height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("/assets/images/background_2.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .container {
+        width: 100%;
+        max-width: 680px;
+        .Card {
+            border-radius: 30px;
+        }
+        .Title {
+            text-align: center;
+            ._logo{
+                width: 100%;
+                max-width: 200px;
+            }
+            h1 {
+                padding: 20px 0;
+                color: $primary_color;
+                white-space: pre-wrap;
+            }
+        }
+        .Input {
+            height: 42px;
+        }
+        .Select {
+            & > div {
+                height: 42px;
+                & span {
+                    line-height: 40px;
+                }
+            }
+        }
+        .Form {
+            display: grid;
+            grid-template-columns: auto;
+            row-gap: 5px;
+        }
+        .ButtonGroup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 0 20px 0;
+        }
+        .ButtonGroupWithText {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            & p {
+                margin: 0 10px 0 0;
+            }            
+        }
+        .Remember {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & p {
+                margin: 0 0 24px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $break-point-md), screen and (max-height: 800px) {
+    .LoginPage{
+        height: 100%;
+        padding: 50px 10px;
+    }
+}
